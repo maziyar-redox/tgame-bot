@@ -1,0 +1,71 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": [
+            "ESNext"
+        ],
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "types": [
+            "node"
+        ],
+        "allowJs": false,
+        "checkJs": false,
+        "maxNodeModuleJsDepth": 0,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "verbatimModuleSyntax": true,
+        "moduleDetection": "force",
+        "resolveJsonModule": true,
+        "preserveSymlinks": false,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true,
+        "noImplicitThis": true,
+        "useUnknownInCatchVariables": true,
+        "alwaysStrict": true,
+        "noUncheckedIndexedAccess": true,
+        "exactOptionalPropertyTypes": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "declaration": false,
+        "declarationMap": false,
+        "sourceMap": true,
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "noEmit": false,
+        "noEmitOnError": true,
+        "removeComments": false,
+        "newLine": "lf",
+        "isolatedModules": true,
+        "preserveConstEnums": true,
+        "useDefineForClassFields": true,
+        "incremental": true,
+        "tsBuildInfoFile": "./node_modules/.cache/tsconfig.tsbuildinfo",
+        "skipLibCheck": false
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.mts",
+        "src/**/*.cts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "coverage",
+        ".git"
+    ]
+}
