@@ -6,9 +6,9 @@ import { api } from "sdk";
 
 export default async function (message, ctx) {
     // Echo the text back — replace with your own logic.
-    api.sendMessage
+    const bb = await api.getMe();
     await api.sendMessage({
         chat_id: message.chat.id,
-        text: `You said: ${message.text ?? '(no text)'}`,
+        text: `You said: ${message.text ?? '(no text)'} ${bb}`,
     });
 }
