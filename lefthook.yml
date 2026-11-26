@@ -5,8 +5,8 @@ pre-commit:
     parallel: false
     commands:
         biome-check-lint:
-            glob: "src/**/*.{ts}"
-            root: "src/"
+            glob: "./src/**/*.{ts}"
+            root: "./src/"
             run: npm run lint {staged_files}
             stage_fixed: true
 
@@ -18,9 +18,9 @@ commit-msg:
 pre-push:
     parallel: false
     commands:
-        typecheck-web:
-            glob: "src/**/*.{ts}"
+        typecheck-bot:
+            glob: "./src/**/*.{ts}"
             run: npx tsc --noEmit -p ./tsconfig.json
-        build-web:
-            glob: "src/**/*.{ts}"
+        build-bot:
+            glob: "./src/**/*.{ts}"
             run: rm -rf tgcloud && npm run build

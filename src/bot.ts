@@ -7,7 +7,7 @@ tg.onMessage(async (message) => {
 });
 
 tg.onCallbackQuery(async (query) => {
-	await query.answer({ text: "got it!" });
+	await query.answer({ text: "got it!!!!" });
 });
 
 export default tg;
