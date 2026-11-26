@@ -1,80 +1,84 @@
 {
-    "name": "tgame-bot",
-    "author": "Maziyar Isanezhad",
-    "private": true,
-    "type": "module",
-    "devDependencies": {
-        "@commitlint/cli": "^21.2.4",
-        "@commitlint/config-conventional": "^21.2.4",
-        "@tgcloud/cli": "^0.2.0",
-        "@types/node": "^26.6.11",
-        "commitizen": "^4.3.2",
-        "cz-conventional-changelog": "^3.3.0",
-        "cz-git": "^1.14.0",
-        "husky": "^9.1.7",
-        "lefthook": "^2.2.4",
-        "syncpack": "^15.3.4",
-        "tsx": "^4.23.15",
-        "typescript": "^7.0.2"
-    },
-    "keywords": [
-        "nextjs",
-        "full-stack",
-        "devops",
-        "admin-panel",
-        "web",
-        "ecommerce"
-    ],
-    "version": "0.0.1",
-    "repository": "https://github.com/maziyar-redox/tmod-bot",
-    "scripts": {
-        "deploy": "tgcloud push",
-        "status": "tgcloud status",
-        "run": "tgcloud run",
-        "build": "puregram-serverless build src/bot.ts",
-        "update:deps": "syncpack update --target latest",
-        "update:commit": "cz"
-    },
-    "dependencies": {
-        "@puregram/serverless": "^3.0.2",
-        "puregram": "^3.12.0"
-    },
-    "packageManager": "npm@12.1.0",
-    "engines": {
-        "node": ">=26"
-    },
-    "lint-staged": {
-        "frontend/web/*.{ts,tsx}": [
-            "npm run lint",
-            "npm run format"
-        ]
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog",
-            "useEmoji": true,
-            "scopes": [
-                "ai",
-                "admin",
-                "api",
-                "ci",
-                "deps",
-                "release"
-            ],
-            "skipQuestions": [],
-            "messages": {
-                "type": "Select the type of change you're committing:",
-                "scope": "Select the scope (app/package):",
-                "subject": "Write a short description:",
-                "body": "Provide a longer description (optional):",
-                "breaking": "List any BREAKING CHANGES:",
-                "issues": "List any related issues (optional):"
-            }
-        }
-    },
-    "allowScripts": {
-        "esbuild@0.27.7": true,
-        "lefthook@2.2.4": true,
-        "esbuild@0.28.2": true
-    }
+	"name": "tgame-bot",
+	"author": "Maziyar Isanezhad",
+	"private": true,
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "2.6.9",
+		"@commitlint/cli": "^21.2.4",
+		"@commitlint/config-conventional": "^21.2.4",
+		"@tgcloud/cli": "^0.2.0",
+		"@types/node": "^26.6.11",
+		"commitizen": "^4.3.2",
+		"cz-conventional-changelog": "^3.3.0",
+		"cz-git": "^1.14.0",
+		"husky": "^9.1.7",
+		"lefthook": "^2.2.4",
+		"syncpack": "^15.3.4",
+		"tsc": "^2.0.4",
+		"typescript": "^7.0.2"
+	},
+	"keywords": [
+		"nextjs",
+		"full-stack",
+		"devops",
+		"admin-panel",
+		"web",
+		"ecommerce"
+	],
+	"version": "0.0.1",
+	"repository": "https://github.com/maziyar-redox/tmod-bot",
+	"scripts": {
+		"deploy": "tgcloud push",
+		"status": "tgcloud status",
+		"run": "tgcloud run",
+		"build": "puregram-serverless build src/bot.ts",
+		"lint": "biome check",
+		"format": "biome format --write",
+		"write": "biome check --write",
+		"update:deps": "syncpack update --target latest",
+		"update:commit": "cz"
+	},
+	"dependencies": {
+		"@puregram/serverless": "^3.0.2",
+		"puregram": "^3.12.0"
+	},
+	"packageManager": "npm@12.1.0",
+	"engines": {
+		"node": ">=26"
+	},
+	"lint-staged": {
+		"frontend/web/*.{ts,tsx}": [
+			"npm run lint",
+			"npm run format"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog",
+			"useEmoji": true,
+			"scopes": [
+				"ai",
+				"admin",
+				"api",
+				"ci",
+				"deps",
+				"release"
+			],
+			"skipQuestions": [],
+			"messages": {
+				"type": "Select the type of change you're committing:",
+				"scope": "Select the scope (app/package):",
+				"subject": "Write a short description:",
+				"body": "Provide a longer description (optional):",
+				"breaking": "List any BREAKING CHANGES:",
+				"issues": "List any related issues (optional):"
+			}
+		}
+	},
+	"allowScripts": {
+		"esbuild@0.27.7": true,
+		"lefthook@2.2.4": true,
+		"esbuild@0.28.2": true
+	}
 }
