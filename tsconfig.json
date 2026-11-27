@@ -1,10 +1,14 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"lib": ["ESNext"],
+		"lib": [
+			"ESNext"
+		],
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
-		"types": ["node"],
+		"types": [
+			"node"
+		],
 		"allowJs": false,
 		"checkJs": false,
 		"maxNodeModuleJsDepth": 0,
@@ -14,6 +18,7 @@
 		"verbatimModuleSyntax": true,
 		"moduleDetection": "force",
 		"resolveJsonModule": true,
+		"allowImportingTsExtensions": true,
 		"preserveSymlinks": false,
 		"strict": true,
 		"noImplicitAny": true,
@@ -42,7 +47,7 @@
 		"sourceMap": true,
 		"inlineSourceMap": false,
 		"inlineSources": false,
-		"noEmit": false,
+		"noEmit": true,
 		"noEmitOnError": true,
 		"removeComments": false,
 		"newLine": "lf",
@@ -51,8 +56,24 @@
 		"useDefineForClassFields": true,
 		"incremental": true,
 		"tsBuildInfoFile": "./node_modules/.cache/tsconfig.tsbuildinfo",
-		"skipLibCheck": false
+		"skipLibCheck": false,
+		"paths": {
+			"@/*": [
+				"./src/*"
+			]
+		}
 	},
-	"include": ["src/**/*.ts", "src/**/*.mts", "src/**/*.cts"],
-	"exclude": ["node_modules", "dist", "coverage", ".git"]
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.mts",
+		"src/**/*.cts",
+		"env.d.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"coverage",
+		".git",
+		"tgcloud"
+	]
 }
