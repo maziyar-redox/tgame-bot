@@ -2,7 +2,7 @@ import { createBot, filters, Keyboard, ButtonStyle } from "@puregram/serverless"
 import { markup, format, bold, italic, code } from "@puregram/markup"
 
 /* Creating a bot instance from serverless util */
-const tg = createBot()
+const tg = createBot();
 	.extend(markup());
 
 /* Defining admin id */
